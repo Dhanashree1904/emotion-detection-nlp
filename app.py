@@ -21,18 +21,18 @@ def load_stopwords():
 # Load emotion model and vectorizer once
 @st.cache_resource
 def load_emotion_model_and_vectorizer():
-    with open('emotion_detection_model.pkl', 'rb') as model_file:
+    with open('models/emotion_detection_model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
-    with open('emotion_vectorizer.pkl', 'rb') as vectorizer_file:
+    with open('models/emotion_vectorizer.pkl', 'rb') as vectorizer_file:
         vectorizer = pickle.load(vectorizer_file)
     return model, vectorizer
 
 # Load sentiment model and vectorizer once
 @st.cache_resource
 def load_sentiment_model_and_vectorizer():
-    with open('model.pkl', 'rb') as model_file:
+    with open('models/model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
-    with open('vectorizer.pkl', 'rb') as vectorizer_file:
+    with open('models/vectorizer.pkl', 'rb') as vectorizer_file:
         vectorizer = pickle.load(vectorizer_file)
     return model, vectorizer
 
